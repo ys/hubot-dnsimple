@@ -19,4 +19,4 @@ module.exports = (robot) ->
         msg.send "oops #{err}"
         return
 
-      robot.emit "dnsimple_records_list", msg, data
+      robot.emit "dnsimple_records_list", msg, domain, data
