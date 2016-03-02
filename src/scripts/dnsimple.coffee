@@ -3,6 +3,9 @@
 #
 # Commands:
 #   hubot dns:list DOMAIN/RECORDS_TYPE - List records for a domain
+#   hubot dns:create NAME/DOMAIN for CONTENT - Create a record
+#   hubot dns:create:TYPE NAME/DOMAIN for CONTENT - Create a record of type TYPE
+#   hubot dns:create:TYPE NAME/DOMAIN for CONTENT with ttl TIME- Create a record of type TYPE with a custom ttl
 #
 
 client = require("dnsimple")({
