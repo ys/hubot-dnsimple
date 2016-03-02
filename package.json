@@ -1,5 +1,5 @@
 {
-  "name": "hubot-dnsimple",
+  "name": "hubot-dnsimple-manager",
   "version": "0.0.1",
   "author": "Yannick Schutz <yannick.schutz@gmail.com>",
   "description": "Manage your dnsimple account",
