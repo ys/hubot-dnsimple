@@ -1,6 +1,6 @@
 {
   "name": "hubot-dnsimple-manager",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Yannick Schutz <yannick.schutz@gmail.com>",
   "description": "Manage your dnsimple account",
   "main": "index.coffee",
