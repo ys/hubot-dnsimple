@@ -20,3 +20,21 @@ module.exports = (robot) ->
         return
 
       robot.emit "dnsimple_records_list", msg, domain, data
+
+  robot.respond /dns:create(?:\:(\w)+)? (\w+)\/([^\s]+) with ([\s]+)(?:\swith ttl (\d+))?$/, (msg) ->
+    type = msg.match[1] || "CNAME"
+    name = msg.match[2]
+    domain = msg.match[3]
+    content = msg.match[4]
+    ttl = msg.match[5] || 3600
+    record =
+      record_type: type,
+      name: name,
+      content: content,
+      ttl: ttl
+    client "POST", "/domains/#{domain}/records", record, (err, data) ->
+      if err
+        msg.send "oops #{err}"
+        return
+
+      robot.emit "dnsimple_records_create", msg, domain, data
